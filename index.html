@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- Sources: w3schools.com
+              stackedoverflow.com
+              developer.mozilla.org/en-US/docs/Web
+              github.com/Homenvy
+              NOTE: I google anything for clarification, which results in either of the above sites.-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LA Mountains</title>
+    </head>
+    <body onload=todayDate()>
+        <nav id="navi">
+            <a href="#">
+                <div class="navLogo"></div>
+                <div id="bannerTitle"></div>
+            </a>
+            <div class="myRouter">
+                <a href="#history" id="urlA"><i> 01. History</i></a>
+                <a href="#team" id="urlB"><i> 02. Team</i></a>
+            </div>
+        </nav>
+
+        <!--A container that houses all sections, including the carousel. All sections will exist on this layer-->
+        <div id="carouselContainer">
+            <section id="hero">
+                <img src="imageHero.png" id="bannerBG" alt="LA Mountain Banner"/>
+                <div id="mountShadow"></div>
+                <div id="spaceSnow"></div>
+            </section>
+
+            <section id="history">
+                <img src="image1.png" alt="LA Mountain View" />
+                <div class="groupedContent">
+                    <div class="numTitle">
+                        <h2>01.</h2>
+                        <h3 class="myTitle">History</h3>
+                        <p class="pContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, 
+                            rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex,
+                            iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed
+                            dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique
+                            ut quam. Vivamus suscipit dignissim tortor nec congue.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="team" >
+                <div id = "tabImage" class="imgContainer">
+                    <div class="containerFill">
+                        <img src="image2-1.png"
+                            class="containerFill"
+                            alt="LA Snowy Mountains"/>
+                    </div>
+                    <div class="containerFill">
+                        <img src="image2-2.png"
+                            class="containerFill"
+                            alt="LA Snowy Mountains 2"/>
+                    </div>
+                </div>
+
+                <div class="groupedContent">
+                    <div class="numTitle">
+                        <h2>02.</h2>
+                        <h3 class="myTitle">
+                            Climb
+                        </h3>
+                        <p class="pTabContent">
+                            Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis 
+                            hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue.
+                        </p>
+                    </div>
+                    
+                    <div id="tabContainer">
+                        <a href="#mountain1"
+                            onclick="mountain1Switch()">
+                            <div id="tab1" class="tab active">
+                                <div id="mount1" class="active">Mountain 1</div>
+                            </div>
+                        </a>
+                        <a href="#mountain2"
+                            onclick="mountain2Switch()">
+                            <div id="tab2" class="tab">
+                                <div id="mount2">Mountain 2</div>
+                            </div>
+                        </a>
+                    </div>
+        
+                    <div class="scheduleContainer">
+                        <h3 style="margin-bottom: 5px">Schedule</h3>
+                        <table id="eventInfo">
+                            <thead>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        25 Nov 2016
+                                    </td>
+                                    <td>
+                                        Vestibulum vivierra
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        28 Nov 2016
+                                    </td>
+                                    <td>
+                                        Vestibulum vivierra
+                                    </td>
+                                </tr>
+                                <tr><td><p></p></td></tr>
+                                <tr>
+                                    <td>
+                                        18 Dec 2016
+                                    </td>
+                                    <td>
+                                        Vestibulum vivierra
+                                    </td>
+                                </tr>
+                                <tr><td><p></p></td></tr>
+                                <tr>
+                                    <td>
+                                        7 Jan 2017
+                                    </td>
+                                    <td>
+                                        Vestibulum vivierra
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="carousel">
+                <!--A Switch to hide the carousel bar-->
+                <div id="switchContainer">
+                    <div class="radar-toggle">
+                      <label class="switch">
+                        <input
+                          type="checkbox"
+                          onclick="toggleMe()"
+                          id="switch"
+                        />
+                        <span class="slider round"></span>
+                      </label>
+                    </div>
+                </div>
+                <!-- Carousel Bar for navigation -->
+                <div id="stickyBar" class="faded">
+                    <div id="carouselBlueContainer"></div>
+                    <div id="innerBlueContainer">
+                        
+                        <div class="ellipse">
+                            <a href="#hero"
+                                class="elliDot elliFocus"
+                                id="sec1">
+                            </a>
+                            <a href="#history"
+                                class="elliDot"
+                                id="sec2">
+                            </a>
+                            <a href="#team"
+                                class="elliDot"
+                                id="sec3"> 
+                            </a>
+                        </div>
+
+                        <div class="thumbnailsContainer">
+                            <img src="photoThumbnail1.png" alt="Man Standing on LA Mountain Thumbnail">
+                            <img src="photoThumbnail2.png" alt="Misty LA Mountain">
+                        </div>
+                        
+                        <div class="thumbnailsContainer">
+                            <img src="photoThumbnail1.png" alt="Man Standing on LA Mountain Thumbnail">
+                            <img src="photoThumbnail2.png" alt="Misty LA Mountain">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <a href="#top" >
+                <div class="navLogo" style ="opacity: .3"></div>
+                <div id="footTitle"></div>
+            </a>
+            <p>© <em id="date" ></em>All rights reserved.</p>
+        </footer>
+    </body>
+</html>
+
+<script>
+
+    //grab all sections, throw them into an array, pull the element's id into its own array
+    const sections = document.querySelectorAll('section');
+    const sectionsArray = Array.from(sections);
+    const ids = sectionsArray.map(section => section.id);
+
+    //flag for when scrolling is not user influenced.
+    let autoScroll = false;
+
+    //ability for hands free auto scrolling
+    shiftPg2 = setTimeout(function() { intoView(document.getElementById("history"));}, 5000);
+    shiftPg3 = setTimeout(function() { intoView(document.getElementById("team"));}, 10000);
+    shiftPg4 = setTimeout(function() { mountain2Switch();}, 15000);
+
+    //event listener for scroll
+    window.onscroll = function() {scrolling()};
+
+    //autoscroller handler, disables the flag variable so clearTimeout doesnt trigger
+    function intoView(element){
+        autoScroll = true;
+        element.scrollIntoView();
+        setTimeout(function() {autoScroll = false;}, 1000);
+    }
+
+    function scrolling() {
+        //scrolling event handling
+        const stickyCar = document.getElementById("carousel");
+        const stickyOffsetTop = stickyCar.offsetTop;
+        const stickyHeight = stickyCar.offsetHeight;
+        const scrollPosition = window.pageYOffset;
+
+
+        //if user interacts with links or scrolls, cancel autoscrolling
+        if (!autoScroll) {
+            clearTimeout(shiftPg2); 
+            clearTimeout(shiftPg3);
+            clearTimeout(shiftPg4);
+        }
+
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("bannerTitle").className = "scrolled";
+            document.getElementById("navi").className = "scrolled";
+            document.getElementById("switchContainer").style.display = "block";
+
+            //handles carousel events depended upon if its visible
+            if (!document.getElementById("switch").checked) {
+                document.getElementById("stickyBar").className = "pumped";
+                document.getElementById("carousel").style.marginTop = "-13%";
+            } else {
+                document.getElementById("stickyBar").className = "faded";
+                document.getElementById("carousel").style.marginTop = "0";
+            }
+        } else {
+            //default value when page is loaded
+            document.getElementById("bannerTitle").className = "";
+            document.getElementById("navi").className = "";
+            document.getElementById("stickyBar").className = "faded";
+            document.getElementById("carousel").style.marginTop = "0";
+            document.getElementById("switchContainer").style.display = "none";
+            carouselHandler("sec1");
+        } 
+        //for loop to determine which section is visible in viewpoint (boolean)
+        for (const id of ids) {
+            //
+            const sectionOffsetTop = document.getElementById(id).offsetTop;
+            const sectionOffsetHeight = document.getElementById(id).offsetHeight;
+            //determines whether an element is in view while scrolling both ways.
+            //NOTE: This accounts for the space the sticky carousel and offsets to ignore.
+            if ((sectionOffsetTop > stickyOffsetTop + stickyHeight && 
+                sectionOffsetTop < scrollPosition + window.innerHeight) || 
+                (sectionOffsetTop < stickyOffsetTop && sectionOffsetTop + 
+                sectionOffsetHeight > scrollPosition)) {
+                    carouselHandler(getCurrentSection(id));
+                    if (id != "hero") {
+                        document.getElementById("urlA").className = "lightSection";
+                        document.getElementById("urlB").className = "lightSection";
+                    } else {
+                        document.getElementById("urlA").className = "darkSection";
+                        document.getElementById("urlB").className = "darkSection";
+                    }
+            }
+        }
+    };
+
+    function getCurrentSection(id) {
+        //determines which section covers which ellipse
+        switch(id) {
+            case "hero":
+                return "sec1";
+            case "history":
+                return "sec2";
+            case "team":
+                return "sec3";
+            default:
+                return "sec2";
+        }
+    }
+
+    function carouselHandler(section) {
+        //handles ellipses styling based on which section is passed
+        const curSection = document.getElementById(section);
+        switch(section) {
+            case "sec1":
+                curSection.className = "elliDot elliFocus";
+                document.getElementById("sec2").className = "elliDot";
+                document.getElementById("sec3").className = "elliDot";
+                break;
+            case "sec2":
+                curSection.className = "elliDot elliFocus";
+                document.getElementById("sec1").className = "elliDot";
+                document.getElementById("sec3").className = "elliDot";
+                break;
+            case "sec3":
+                curSection.className = "elliDot elliFocus";
+                document.getElementById("sec2").className = "elliDot";
+                document.getElementById("sec1").className = "elliDot";
+                curSection.style.top ="78%";
+                break;
+            default:
+                document.getElementById("sec1").className = "elliDot";
+                document.getElementById("sec2").className = "elliDot";
+                document.getElementById("sec3").className = "elliDot";
+                break;
+        }
+    }
+
+    //switch handling for carousel
+    function toggleMe() {
+        const carBar = document.getElementById("stickyBar");
+        const carousel = document.getElementById("carousel");
+
+        if (document.getElementById("switch").checked) {
+            carBar.className = "faded";
+            carousel.style.marginTop = "0";
+        } else {
+            carBar.className = "pumped";
+            carousel.style.marginTop = "-13%"
+        }
+    }
+
+    //grab year for copyright
+    function todayDate(){
+        var today = new Date();
+        var year = today.getFullYear() + ". ";
+        return document.getElementById("date").innerHTML = year;
+    }
+
+    //tab handling of image and active presentation
+    function mountain1Switch() {
+        document.getElementById("mount1").className = "active";
+        document.getElementById("mount2").className = "deactivated";
+
+        document.getElementById("tab1").className = "tab active";
+        document.getElementById("tab2").className = "tab deactivated";
+
+        document.getElementById("tabImage").className = "imgContainer active";
+
+        document.getElementById("tabContainer").className = "deactivated";
+
+        document.getElementById("team").className = "";
+
+        document.getElementById("eventInfo").innerHTML=("<thead></thead><tbody><tr><td>25 Nov 2016" +
+                                    "</td><td>Vestibulum vivierra</td></tr><tr><td>28 Nov 2016</td>" +
+                                    "<td>Vestibulum vivierra</td></tr><tr><td><p></p></td></tr><tr><td>" + 
+                                    "18 Dec 2016</td><td>Vestibulum vivierra</td></tr><tr><td><p></p>" +
+                                    "</td></tr><tr><td>7 Jan 2017</td><td>Vestibulum vivierra</td></tr>" +
+                                    "</tbody>");
+    }
+    function mountain2Switch() {
+        document.getElementById("mount1").className = "deactivated";
+        document.getElementById("mount2").className = "active";
+
+        document.getElementById("tab2").className = "tab active";
+        document.getElementById("tab1").className = "tab deactivated";
+
+        document.getElementById("tabImage").className = "imgContainer deactivated";
+
+        document.getElementById("tabContainer").className = "active";
+
+        document.getElementById("team").className = "active";
+
+        document.getElementById("eventInfo").innerHTML=("<thead></thead><tbody><tr><td>17 Nov 2016" +
+                                    "</td><td>Vestibulum vivierra</td></tr><tr><td><p></p></td></tr>" +
+                                    "<tr><td>13 Dec 2016</td><td>Vestibulum vivierra</td></tr><tr><td>" + 
+                                    "28 Dec 2016</td><td>Vestibulum vivierra</td></tr><tr><td><p></p>" +
+                                    "</td></tr><tr><td>9 Feb 2017</td><td>Vestibulum vivierra</td></tr>" +
+                                    "</tbody>");
+    }
+
+</script>
